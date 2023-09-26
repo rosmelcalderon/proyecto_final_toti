@@ -1,0 +1,291 @@
+/*Container para el GRID*/
+.container-products{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+/*Globales*/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  font-weight: normal;
+}
+.error{
+  text-align: center;
+  color: red;
+}
+body {
+  
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+a {
+  text-decoration: none;
+}
+
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.icono{
+  width:  10rem;
+  height: 2rem;
+}
+
+/*Header*/
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #9de3f7;
+	color: #fff;
+  margin-bottom: 1rem;
+}
+.header__logo {
+  width: 20rem;
+  padding: 2rem;
+}
+/*Navegacion*/
+.navegacion, .user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: bold;
+
+
+}
+
+
+/*Productos'*/
+.tarjeta {
+  flex: 25%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+    
+  }
+  
+  .tarjeta-imagen {
+    width: 80%;
+    height: 100%;
+    object-fit: contain;
+
+  }
+  
+ 
+  .tarjeta-titulo {
+    margin: 0;
+  }
+  
+  .tarjeta-descripcion {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  .tarjeta-precio {
+    color: #000;
+    font-weight: 700;
+    margin: 15px 0;
+  }
+  
+  .tarjeta-conenido-admin{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+  }
+  /* Estilos para el carrito */
+  .carrito {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  
+
+.footer {
+  max-width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem; 
+  background-color: #b0ebfd;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+.footer__texto {
+ 
+  text-align: center;
+  font-size: 1rem;
+}
+
+/*Formulario*/
+/** Contacto **/
+.formulario {
+  background-color: #b0ebfd;
+  width: min( 60rem, 100% ); /** Utilizar el valor más pequeño **/
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.formulario fieldset {
+  border: none;
+}
+.formulario legend {
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+.campo label {
+  color: var(--blanco);
+  font-weight: bold;
+  margin-bottom: .5rem;
+  display: block;
+}
+.campo textarea {
+  height: 20rem;
+}
+
+.input-text {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
+
+/*Botones*/
+.boton {
+  background-color: rgb(21, 255, 13);
+  padding: 1rem 3rem;
+  margin-top: 3rem;
+  margin-left: 70%;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: .5rem;
+  width: 90%;
+  text-align: center;
+  border: none;
+  
+}
+@media (min-width: 768px) {
+  .boton {
+      width: auto;
+  }
+}
+.boton:hover {
+  cursor: pointer;
+  background-color: #3beb7e;
+}
+.boton-agregar {
+  background-color: #4caf50;
+ 
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  cursor: pointer;
+  margin-top: auto;
+  border-radius: .5rem;
+}
+
+.boton-agregar:hover {
+  background-color: #3beb7e;
+}
+.boton-editar{
+  background-color: #ffe137;
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  cursor: pointer;
+  margin-top: auto;
+  border-radius: .5rem;
+}
+
+.boton-editar:hover {
+  background-color: #cde643;
+}
+.boton-eliminar {
+  background-color: #4caf50;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  margin-top: auto;
+  border-radius: .5rem;
+}
+
+/*Boton eliminar Admin*/
+.boton-eliminar-admin {
+  background-color: #4caf50;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  cursor: pointer;
+  margin-top: auto;
+  border-radius: .5rem;
+}
+.boton-eliminar-admin:hover {
+  background-color: #ff2727;
+}
+.btn-producto{
+  border: none;
+	background:  #4caf50;
+	padding: 5px 20px;
+	border-radius: 6px;
+	cursor: pointer;
+  text-transform: uppercase;
+}
+.btn-producto:hover {
+background-color: #3beb7e;
+}
+
+.btn-logout {
+	border: none;
+	background: rgb(255, 240, 36);
+	padding: 5px 20px;
+	border-radius: 6px;
+	cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-logout:hover {
+	background-color: red;
+	color: #000;
+}
+
